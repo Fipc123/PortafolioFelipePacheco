@@ -15,6 +15,7 @@
             <a href="#Habilidades">Habilidades</a>
             <a href="#Trayectoria">Educación</a>
             <a href="#Proyectos">Proyectos</a>
+            <a href="#Contacto">Contacto</a>
         </nav>
     </header>
 
@@ -30,11 +31,6 @@
                     <p class="detalle">Cursando el 4to año de carrera. Enfocado en el desarrollo de entornos inmersivos y mecánicas interactivas.</p>
                 </div>
                 
-                <div class="Botones-Principales">
-                    <a href="mailto:tu-correo@ejemplo.com" class="btn btn-contacto">📩 Contactar</a>
-                    <a href="mi-curriculum.pdf" download class="btn btn-cv">📄 Descargar CV</a>
-                </div>
-
                 <div class="Botones-Redes">
                     <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
                     <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -60,14 +56,14 @@
                     <div class="fecha">2022 - Presente</div>
                     <div class="contenido">
                         <h3>Ingeniería en Realidad Virtual</h3>
-                        <p>Universidad de Chile (o la tuya) - 4to año.</p>
+                        <p>Universidad (Tu Universidad) - Actualmente en 4to año.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="fecha">2024</div>
                     <div class="contenido">
-                        <h3>Desarrollo de Experiencias VR</h3>
-                        <p>Especialización en interacción y optimización 3D.</p>
+                        <h3>Especialización en Desarrollo VR</h3>
+                        <p>Enfoque en optimización y mecánicas de interacción.</p>
                     </div>
                 </div>
             </div>
@@ -79,45 +75,47 @@
                 <div class="perfil">
                     <img src="Imagenes/Captura de pantalla 2025-06-30 021328.jpg" alt="Juego Clicker">
                     <h3>Juego Clicker</h3>
-                    <p>Clicker interactivo en Unity.</p>
+                    <p>Desarrollado en Unity.</p>
                     <button onclick="abrirModal('modal1')">Ver Detalles</button>
                 </div>
-
                 <div class="perfil">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMfvCqG1NEdLNW0UV6U9Rz-uro8xs6NWnCkg&s" alt="Proyecto 2">
-                    <h3>Entorno VR</h3>
-                    <p>Espacio reservado proyecto 2.</p>
+                    <h3>Proyecto VR 2</h3>
+                    <p>Simulación interactiva.</p>
                     <button onclick="abrirModal('modal2')">Ver Detalles</button>
                 </div>
-
                 <div class="perfil">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpBLKrZS8qLZNY4oVZkMeJWTDVIQQqIwQ5yB48Pnr0r7jf4brThqVGayMejwYS_idykqM&usqp=CAU" alt="Proyecto 3">
-                    <h3>Modelado 3D</h3>
-                    <p>Espacio reservado proyecto 3.</p>
+                    <h3>Proyecto VR 3</h3>
+                    <p>Entorno inmersivo.</p>
                     <button onclick="abrirModal('modal3')">Ver Detalles</button>
                 </div>
-
                 <div class="perfil">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiE26ff46aKpfHCPy88HJkziodR9zd2jFhlg&s" alt="Proyecto 4">
-                    <h3>Proyecto Final</h3>
-                    <p>Espacio reservado proyecto 4.</p>
+                    <h3>Proyecto VR 4</h3>
+                    <p>Desarrollo futuro.</p>
                     <button onclick="abrirModal('modal4')">Ver Detalles</button>
                 </div>
             </div>
         </section>
 
-        <div id="modal1" class="modal">
-            <div class="modal-contenido">
-                <span class="cerrar" onclick="cerrarModal('modal1')">&times;</span>
-                <h3>Detalles: Juego Clicker</h3>
-                <p>Aquí puedes explicar los retos técnicos: optimización de UI, sistema de guardado, etc.</p>
-                <img src="Imagenes/Captura de pantalla 2025-06-30 021328.jpg" style="width:100%; margin-top:15px; border-radius:10px;">
+        <section id="Contacto" class="seccion-contacto">
+            <h2 class="titulo-seccion">Comunicación y Recursos</h2>
+            <p style="text-align: center; color: #8b949e; margin-bottom: 30px;">Puedes revisar mis archivos técnicos o descargar mi historial profesional aquí:</p>
+            <div class="botones-comunicacion">
+                <a href="TU_LINK_DE_DRIVE_AQUI" target="_blank" class="btn-com">
+                    <i class="fab fa-google-drive"></i> Ver Proyectos en Drive
+                </a>
+                <a href="Tu_CV.pdf" download class="btn-com btn-resaltado">
+                    <i class="fas fa-file-download"></i> Descargar mi CV
+                </a>
             </div>
-        </div>
+        </section>
 
-        <div id="modal2" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modal2')">&times;</span><h3>Proyecto 2</h3><p>Información del proyecto 2...</p></div></div>
-        <div id="modal3" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modal3')">&times;</span><h3>Proyecto 3</h3><p>Información del proyecto 3...</p></div></div>
-        <div id="modal4" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modal4')">&times;</span><h3>Proyecto 4</h3><p>Información del proyecto 4...</p></div></div>
+        <div id="modal1" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modal1')">&times;</span><h3>Juego Clicker</h3><p>Detalles del proyecto clicker...</p></div></div>
+        <div id="modal2" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modal2')">&times;</span><h3>Proyecto 2</h3><p>Detalles del proyecto 2...</p></div></div>
+        <div id="modal3" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modal3')">&times;</span><h3>Proyecto 3</h3><p>Detalles del proyecto 3...</p></div></div>
+        <div id="modal4" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modal4')">&times;</span><h3>Proyecto 4</h3><p>Detalles del proyecto 4...</p></div></div>
 
     </main>
 
@@ -128,9 +126,7 @@
     <script>
         function abrirModal(id) { document.getElementById(id).style.display = "block"; }
         function cerrarModal(id) { document.getElementById(id).style.display = "none"; }
-        window.onclick = function(event) {
-            if (event.target.className === 'modal') { event.target.style.display = "none"; }
-        }
+        window.onclick = function(event) { if (event.target.className === 'modal') { event.target.style.display = "none"; } }
     </script>
 </body>
 </html>
