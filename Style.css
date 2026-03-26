@@ -1,153 +1,201 @@
-/* --- Estilos Generales --- */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+/* --- VARIABLES DE COLOR --- */
+:root {
+    --fondo: #0a0e14;
+    --tarjeta: #161b22;
+    --primario: #2f81f7; /* Azul brillante tech */
+    --texto: #f0f6fc;
+    --texto-dim: #8b949e;
 }
 
-/* --- Header y Navegación --- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo);
+    color: var(--texto);
+    scroll-behavior: smooth;
+}
+
+/* --- HEADER --- */
 header {
-  background-color: yellow;
-  padding: 20px;
-  text-align: center;
+    background-color: rgba(10, 14, 20, 0.9);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #30363d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .Logo {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primario);
+    letter-spacing: 2px;
 }
 
 nav a {
-  text-decoration: none;
-  color: #000;
-  padding: 10px;
-  font-size: 1.2em;
-  transition: color 0.3s;
+    text-decoration: none;
+    color: var(--texto);
+    padding: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #2563eb;
+    color: var(--primario);
 }
 
-/* --- Sección Presentación (Flexbox) --- */
+/* --- PRESENTACIÓN (SOBRE MÍ) --- */
 .contenedor {
-  display: flex;
-  align-items: center; /* Centrado vertical */
-  justify-content: center; /* Centrado horizontal */
-  gap: 40px;
-  padding: 50px 20px;
-  flex-wrap: wrap; /* Para que en celular se ponga uno abajo de otro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 10%;
+    flex-wrap: wrap;
 }
 
-.Izquierda img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.Izquierda .foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid var(--primario);
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(47, 129, 247, 0.3);
 }
 
 .Derecha {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
+    max-width: 500px;
 }
 
-.Parrafos p {
-  margin: 5px 0;
-  font-size: 1.1em;
+.Derecha h1 {
+    font-size: 2.5em;
+    margin: 0;
 }
 
-/* --- Botones de Redes Sociales --- */
-.Botones {
-  display: flex;
-  gap: 10px;
+.carrera {
+    color: var(--primario);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0;
 }
 
-/* Estilo general de tus botones (aquamarina) */
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 30px;
-  color: #0000ff; /* Azul */
-  background-color: aquamarine;
-  border: 1px solid #ddd;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.detalle {
+    color: var(--texto-dim);
 }
 
-button:hover {
-  filter: brightness(0.9);
-  transform: scale(1.05);
+/* --- BOTONES PROFESIONALES --- */
+.Botones-Principales {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
 }
 
-.imagenes-chicas {
-  display: flex;
-  gap: 10px;
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-contacto {
+    background-color: var(--primario);
+    color: white;
+}
+
+.btn-cv {
+    border: 2px solid var(--primario);
+    color: var(--primario);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(47, 129, 247, 0.4);
+}
+
+.Botones-Redes {
+    margin-bottom: 20px;
+}
+
+.Botones-Redes a {
+    color: var(--texto-dim);
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.Botones-Redes a:hover {
+    color: white;
 }
 
 .imagenes-chicas img {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  border: 2px solid white;
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    margin-right: 10px;
+    opacity: 0.7;
 }
 
-/* --- Sección Proyectos (Grid) --- */
+/* --- SECCIÓN PROYECTOS --- */
+.titulo-seccion {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2em;
+}
+
 .container {
-  display: grid;
-  /* Crea columnas automáticas de mínimo 300px */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px 10%;
 }
 
 .perfil {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 25px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--tarjeta);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #30363d;
+    transition: 0.3s;
 }
 
 .perfil:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--primario);
+    transform: translateY(-5px);
 }
 
 .perfil img {
-  width: 100%; /* Imagen a lo ancho de la tarjeta */
-  height: 200px;
-  border-radius: 10px; /* Ya no es circular para que se vea mejor el proyecto */
-  object-fit: cover;
-  margin-bottom: 15px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-/* Estilo específico para los botones de "Ver más" */
 .perfil button {
-  background: #2563eb;
-  color: white;
-  border-radius: 8px;
-  width: 100%;
+    background: transparent;
+    border: 1px solid var(--primario);
+    color: var(--primario);
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
 }
 
 .perfil button:hover {
-  background: #1d4ed8;
+    background: var(--primario);
+    color: white;
 }
 
-/* --- Responsivo --- */
-@media (max-width: 600px) {
-  .contenedor {
+footer {
     text-align: center;
-  }
-  .Botones {
-    justify-content: center;
-  }
+    padding: 40px;
+    color: var(--texto-dim);
+    border-top: 1px solid #30363d;
 }
